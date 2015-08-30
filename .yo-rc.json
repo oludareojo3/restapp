@@ -1,0 +1,21 @@
+{
+  "generator-jhipster": {
+    "baseName": "restapp",
+    "packageName": "com.restapp",
+    "packageFolder": "com/restapp",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "enableTranslation": false,
+    "rememberMeKey": "4b9c66e9145cf2615cc4a4ded3caca230a50a365"
+  }
+}

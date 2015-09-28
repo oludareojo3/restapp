@@ -1,21 +1,21 @@
 package com.restapp.domain.shoppingcart;
 
-import com.restapp.domain.menu.*;
+import com.restapp.domain.MenuItem;
 import java.util.List;
 
 public class ShoppingCart {
-	
+
 	private String userid;
 	private String sessionid;
 	private List<MenuItem> itemsInCart;
-	
+
 	public ShoppingCart(String uid, String sid, List<MenuItem> items)
 	{
 		this.userid = uid;
 		this.sessionid = sid;
 		this.itemsInCart = items;
 	}
-	
+
 	public ShoppingCart() {
 		// TODO Auto-generated constructor stub
 	}
@@ -40,5 +40,5 @@ public class ShoppingCart {
 	public void setItemsInCart(List<MenuItem> itemsInCart) {
 		this.itemsInCart = itemsInCart;
 	}
-	
+
 }

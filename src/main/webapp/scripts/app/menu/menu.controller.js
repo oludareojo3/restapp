@@ -1,8 +1,11 @@
 angular.module('restappApp')
-    .controller('MenuController', function($scope, MenuItemFactory) {
+    .controller('MenuController', function($scope, MenuItem) {
 
-        MenuItemFactory.menuItems(function(result) {
-            $scope.menuItems = result;
-        });
+        $scope.loadAll = function() {
+            MenuItem.query(function(result) {
+                $scope.menuItems = result;
+            });
+        };
+        $scope.loadAll();
 
     });

@@ -1,0 +1,33 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "cost",
+            "fieldType": "Double"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "calories",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "foodType",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20150928032306",
+    "dto": "no",
+    "pagination": "no"
+}

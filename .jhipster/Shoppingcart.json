@@ -1,0 +1,37 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "hasmany",
+            "otherEntityName": "menuItem",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "n",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "sessionId",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "menuItem",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "currentUser",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "totalCost",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151018234852",
+    "dto": "no",
+    "pagination": "pagination"
+}

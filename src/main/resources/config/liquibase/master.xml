@@ -6,5 +6,8 @@
 
     <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20150928032306_added_entity_MenuItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151022233943_added_entity_MyOrder.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151022234215_added_entity_MyOrderDetails.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151022234401_added_entity_ShoppingCart.xml" relativeToChangelogFile="false"/>
     <!-- JHipster will add liquibase changelogs here -->
 </databaseChangeLog>

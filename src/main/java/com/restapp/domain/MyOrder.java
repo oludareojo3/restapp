@@ -25,29 +25,39 @@ public class MyOrder implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
-    
+
+
     @Column(name = "order_id")
     private Integer orderId;
-    
+
     @Column(name = "user_id")
     private Integer userId;
-    
+
     @Column(name = "session_id")
     private Integer sessionId;
-    
+
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     @JsonSerialize(using = CustomDateTimeSerializer.class)
     @JsonDeserialize(using = CustomDateTimeDeserializer.class)
     @Column(name = "order_date")
     private DateTime orderDate;
-    
+
     @Column(name = "order_value")
     private String orderValue;
 
     @OneToMany(mappedBy = "detailstoorder")
     @JsonIgnore
     private Set<MyOrderDetails> ordertodetailss = new HashSet<>();
+
+    public ShoppingCart getShoppingCart() {
+        return shoppingcart;
+    }
+
+    public void setShoppingCart(ShoppingCart shoppingCart) {
+        this.shoppingcart = shoppingCart;
+    }
+
+    private ShoppingCart shoppingcart;
 
     public Long getId() {
         return id;

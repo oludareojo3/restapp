@@ -6,9 +6,7 @@ angular.module('restappApp')
             .state('menu', {
                 parent: 'site',
                 url: '/',
-                data: {
-                    roles: []
-                },
+                data: {},
                 views: {
                     'content@': {
                         templateUrl: 'scripts/app/menu/menu.html',

@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span>MyOrderDetails</span> {{myOrderDetails.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span>OrderId</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{myOrderDetails.orderId}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ItemId</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{myOrderDetails.itemId}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Qty</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{myOrderDetails.qty}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>UnitPrice</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{myOrderDetails.unitPrice}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Attribute</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{myOrderDetails.attribute}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>detailstoorder</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="myOrder.detail({id:myOrderDetails.detailstoorder.id})">{{myOrderDetails.detailstoorder.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

@@ -1,0 +1,26 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "order",
+            "otherEntityName": "myOrder",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "shoppingcart"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "userId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "sessionId",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20151022234401",
+    "dto": "no",
+    "pagination": "pager"
+}

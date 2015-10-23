@@ -1,0 +1,41 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "ordertodetails",
+            "otherEntityName": "myOrderDetails",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "detailstoorder"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "orderId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "userId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "sessionId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "orderDate",
+            "fieldType": "DateTime"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "orderValue",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151022233943",
+    "dto": "no",
+    "pagination": "pager"
+}

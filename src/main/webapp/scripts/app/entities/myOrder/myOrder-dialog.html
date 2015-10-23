@@ -1,0 +1,61 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myMyOrderLabel">Create or edit a MyOrder</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="myOrder.id" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="field_orderId">OrderId</label>
+            <input type="number" class="form-control" name="orderId" id="field_orderId"
+                    ng-model="myOrder.orderId"
+                    >
+
+        </div>
+        <div class="form-group">
+            <label for="field_userId">UserId</label>
+            <input type="number" class="form-control" name="userId" id="field_userId"
+                    ng-model="myOrder.userId"
+                    >
+
+        </div>
+        <div class="form-group">
+            <label for="field_sessionId">SessionId</label>
+            <input type="number" class="form-control" name="sessionId" id="field_sessionId"
+                    ng-model="myOrder.sessionId"
+                    >
+
+        </div>
+        <div class="form-group">
+            <label for="field_orderDate">OrderDate</label>
+            <input type="datetime-local" class="form-control" name="orderDate" id="field_orderDate"
+                    ng-model="myOrder.orderDate" ng-model-options="{timezone: 'UTC'}"
+                    >
+
+        </div>
+        <div class="form-group">
+            <label for="field_orderValue">OrderValue</label>
+            <input type="text" class="form-control" name="orderValue" id="field_orderValue"
+                    ng-model="myOrder.orderValue"
+                    >
+
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

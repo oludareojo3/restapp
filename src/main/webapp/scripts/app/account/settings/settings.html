@@ -23,15 +23,15 @@
                            ng-model="settingsAccount.firstName" ng-minlength=1 ng-maxlength=50 required maxlength="50">
                     <div ng-show="form.firstName.$dirty && form.firstName.$invalid">
                         <p class="help-block"
-                               ng-show="form.firstName.$error.required">
+                           ng-show="form.firstName.$error.required">
                             Your first name is required.
                         </p>
                         <p class="help-block"
-                               ng-show="form.firstName.$error.minlength">
+                           ng-show="form.firstName.$error.minlength">
                             Your first name is required to be at least 1 character.
                         </p>
                         <p class="help-block"
-                               ng-show="form.firstName.$error.maxlength">
+                           ng-show="form.firstName.$error.maxlength">
                             Your first name cannot be longer than 50 characters.
                         </p>
                     </div>
@@ -42,15 +42,15 @@
                            ng-model="settingsAccount.lastName" ng-minlength=1 ng-maxlength=50 required maxlength="50">
                     <div ng-show="form.lastName.$dirty && form.lastName.$invalid">
                         <p class="help-block"
-                               ng-show="form.lastName.$error.required">
+                           ng-show="form.lastName.$error.required">
                             Your last name is required.
                         </p>
                         <p class="help-block"
-                               ng-show="form.lastName.$error.minlength">
+                           ng-show="form.lastName.$error.minlength">
                             Your last name is required to be at least 1 character.
                         </p>
                         <p class="help-block"
-                               ng-show="form.lastName.$error.maxlength">
+                           ng-show="form.lastName.$error.maxlength">
                             Your last name cannot be longer than 50 characters.
                         </p>
                     </div>
@@ -61,20 +61,159 @@
                            ng-model="settingsAccount.email" ng-minlength=5 ng-maxlength=100 required maxlength="100">
                     <div ng-show="form.email.$dirty && form.email.$invalid">
                         <p class="help-block"
-                               ng-show="form.email.$error.required">
+                           ng-show="form.email.$error.required">
                             Your e-mail is required.
                         </p>
                         <p class="help-block"
-                               ng-show="form.email.$error.email">
+                           ng-show="form.email.$error.email">
                             Your e-mail is invalid.
                         </p>
                         <p class="help-block"
-                               ng-show="form.email.$error.minlength">
+                           ng-show="form.email.$error.minlength">
                             Your e-mail is required to be at least 5 characters.
                         </p>
                         <p class="help-block"
-                               ng-show="form.email.$error.maxlength">
+                           ng-show="form.email.$error.maxlength">
                             Your e-mail cannot be longer than 100 characters.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Bill To Address </label>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Street Adress"
+                           ng-model="settingsAccount.address" ng-minlength=10 ng-maxlength=50 required>
+                    <div ng-show="form.address.$dirty && form.address.$invalid">
+                        <p class="help-block"
+                           ng-show="form.address.$error.required">
+                            Your address is required.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.address.$error.minlength">
+                            Your address is required to be at least 10 characters.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.address.$error.maxlength">
+                            Your address cannot be longer than 50 characters.
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" name="city" placeholder="City"
+                           ng-model="settingsAccount.city" ng-minlength=3 ng-maxlength=50 required>
+                    <div ng-show="form.city.$dirty && form.city.$invalid">
+                        <p class="help-block"
+                           ng-show="form.city.$error.required">
+                            Your city is required.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.city.$error.minlength">
+                            Your city  is required to be at least 3 characters.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.city.$error.maxlength">
+                            Your city name cannot be longer than 50 characters.
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" class="form-control" id="state" name="state" placeholder="State"
+                           ng-model="settingsAccount.state" ng-minlength=3 ng-maxlength=50 required>
+                    <div ng-show="form.state.$dirty && form.state.$invalid">
+                        <p class="help-block"
+                           ng-show="form.state.$error.required">
+                            Your State is required.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.state.$error.minlength">
+                            Your State  is required to be at least 3 characters.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.state.$error.maxlength">
+                            Your State name cannot be longer than 50 characters.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="zipCode">Zip Code</label>
+                    <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="Zip Code"
+                           ng-model="settingsAccount.zipCode" ng-minlength=3 ng-maxlength=50 required>
+                    <div ng-show="form.zipCode.$dirty && form.zipCode.$invalid">
+                        <p class="help-block"
+                           ng-show="form.zipCode.$error.required">
+                            Your zipCode is required.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.zipCode.$error.minlength">
+                            Your zipCode  is required to be at least 3 characters.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.zipCode.$error.maxlength">
+                            Your zipCode name cannot be longer than 50 characters.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="creditCard">Credit Card</label>
+                    <input type="text" class="form-control" id="creditCard" name="creditCard" placeholder="Credit Card Number"
+                           ng-model="settingsAccount.creditCard" ng-minlength=15 ng-maxlength=19 required>
+                    <div ng-show="form.creditCard.$dirty && form.creditCard.$invalid">
+                        <p class="help-block"
+                           ng-show="form.creditCard.$error.required">
+                            Your creditCard is required.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.creditCard.$error.minlength">
+                            Your creditCard  is required to be at least 15 characters.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.creditCard.$error.maxlength">
+                            Your creditCard name cannot be longer than 19 characters.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ccMonth">Expiry month</label>
+                    <input type="text" class="form-control" id="ccMonth" name="ccMonth" placeholder="Expiry Month"
+                           ng-model="settingsAccount.ccMonth" ng-minlength=2 ng-maxlength=2 required>
+                    <div ng-show="form.ccMonth.$dirty && form.ccMonth.$invalid">
+                        <p class="help-block"
+                           ng-show="form.ccMonth.$error.required">
+                            Your ccMonth is required.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.ccMonth.$error.minlength">
+                            Month is required to be in MM format
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.ccMonth.$error.maxlength">
+                            Month is required to be in MM format
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ccYear">Expiry Year</label>
+                    <input type="text" class="form-control" id="ccYear" name="ccYear" placeholder="Credit card expiry Year"
+                           ng-model="settingsAccount.ccYear" ng-minlength=2 ng-maxlength=2 required>
+                    <div ng-show="form.ccYear.$dirty && form.ccYear.$invalid">
+                        <p class="help-block"
+                           ng-show="form.ccYear.$error.required">
+                            Your ccYear is required.
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.ccYear.$error.minlength">
+                            Year is required to be in YY format
+                        </p>
+                        <p class="help-block"
+                           ng-show="form.ccYear.$error.maxlength">
+                            Year is required to be in YY format
                         </p>
                     </div>
                 </div>

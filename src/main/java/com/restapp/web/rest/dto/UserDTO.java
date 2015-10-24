@@ -31,6 +31,28 @@ public class UserDTO {
     @Size(min = 5, max = 100)
     private String email;
 
+    @Size(min = 5, max = 50)
+    private String address;
+
+    @Size(min = 3, max = 50)
+    private String city;
+
+    @Size(min = 2, max = 30)
+    private String state;
+
+    @Size(min = 3, max = 10)
+    private String zipCode;
+
+
+    @Size(min = 15, max = 19)
+    private String creditCard;
+
+    @Size(min = 2, max = 2)
+    private String ccMonth;
+
+    @Size(min = 2, max = 2)
+    private String ccYear;
+
     @Size(min = 2, max = 5)
     private String langKey;
 
@@ -40,7 +62,8 @@ public class UserDTO {
     }
 
     public UserDTO(String login, String password, String firstName, String lastName, String email, String langKey,
-                   List<String> roles) {
+                   List<String> roles, String address, String city, String state, String zipCode, String creditCard,
+                   String ccMonth, String ccYear) {
         this.login = login;
         this.password = password;
         this.firstName = firstName;
@@ -48,6 +71,14 @@ public class UserDTO {
         this.email = email;
         this.langKey = langKey;
         this.roles = roles;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zipCode = zipCode;
+        this.creditCard = creditCard;
+        this.ccMonth = ccMonth;
+        this.ccYear = ccYear;
+
     }
 
     public String getPassword() {
@@ -78,16 +109,69 @@ public class UserDTO {
         return roles;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public String getCreditCard() {
+        return creditCard;
+    }
+
+    public void setCreditCard(String creditCard) {
+        this.creditCard = creditCard;
+    }
+
+    public String getCcMonth() {
+        return ccMonth;
+    }
+
+    public void setCcMonth(String ccMonth) {
+        this.ccMonth = ccMonth;
+    }
+
+    public String getCcYear() {
+        return ccYear;
+    }
+
+    public void setCcYear(String ccYear) {
+        this.ccYear = ccYear;
+    }
+
     @Override
     public String toString() {
         return "UserDTO{" +
-        "login='" + login + '\'' +
-        ", password='" + password + '\'' +
-        ", firstName='" + firstName + '\'' +
-        ", lastName='" + lastName + '\'' +
-        ", email='" + email + '\'' +
-        ", langKey='" + langKey + '\'' +
-        ", roles=" + roles +
-        '}';
+            "login='" + login + '\'' +
+            ", password='" + password + '\'' +
+            ", firstName='" + firstName + '\'' +
+            ", lastName='" + lastName + '\'' +
+            ", email='" + email + '\'' +
+            ", langKey='" + langKey + '\'' +
+            ", roles=" + roles +
+            ", address="  + address +
+            '}';
     }
 }

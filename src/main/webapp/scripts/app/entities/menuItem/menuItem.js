@@ -7,7 +7,7 @@ angular.module('restappApp')
                 parent: 'entity',
                 url: '/menuItems',
                 data: {
-                    roles: ['ROLE_USER'],
+                    roles: ['ROLE_ADMIN'],
                     pageTitle: 'MenuItems'
                 },
                 views: {

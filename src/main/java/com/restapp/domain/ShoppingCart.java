@@ -19,11 +19,10 @@ public class ShoppingCart implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
-    
+
     @Column(name = "user_id")
     private Integer userId;
-    
+
     @Column(name = "session_id")
     private Integer sessionId;
 
@@ -59,8 +58,8 @@ public class ShoppingCart implements Serializable {
         return orders;
     }
 
-    public void setOrders(Set<MyOrder> myOrders) {
-        this.orders = myOrders;
+    public void setOrders(Set<MyOrder> orders) {
+        this.orders = orders;
     }
 
     @Override

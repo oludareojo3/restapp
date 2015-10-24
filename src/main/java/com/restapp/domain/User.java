@@ -33,7 +33,7 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
     @JsonIgnore
     @NotNull
-    @Size(min = 60, max = 60) 
+    @Size(min = 60, max = 60)
     @Column(length = 60)
     private String password;
 
@@ -57,6 +57,36 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @Column(name = "lang_key", length = 5)
     private String langKey;
 
+    @Size(min = 10, max = 50)
+    @Column(name = "address", length = 50)
+    private String address;
+
+    @Size(min = 3, max = 50)
+    @Column(name = "city", length = 50)
+    private String city;
+
+    @Size(min = 2, max = 30)
+    @Column(name = "state", length = 50)
+    private String state;
+
+    @Size(min = 3, max = 10)
+    @Column(name = "zipCode", length = 50)
+    private String zipCode;
+
+
+    @Size(min = 15, max = 19)
+    @Column(name = "creditCard", length = 50)
+    private String creditCard;
+
+    @Size(min = 2, max = 2)
+    @Column(name = "ccMonth", length = 2)
+    private String ccMonth;
+
+    @Size(min = 2, max = 4)
+    @Column(name = "ccYear", length = 4)
+    private String ccYear;
+
+
     @Size(max = 20)
     @Column(name = "activation_key", length = 20)
     @JsonIgnore
@@ -73,9 +103,9 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @JsonIgnore
     @ManyToMany
     @JoinTable(
-            name = "JHI_USER_AUTHORITY",
-            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
-            inverseJoinColumns = {@JoinColumn(name = "authority_name", referencedColumnName = "name")})
+        name = "JHI_USER_AUTHORITY",
+        joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
+        inverseJoinColumns = {@JoinColumn(name = "authority_name", referencedColumnName = "name")})
     private Set<Authority> authorities = new HashSet<>();
 
     @JsonIgnore
@@ -97,6 +127,15 @@ public class User extends AbstractAuditingEntity implements Serializable {
     public void setLogin(String login) {
         this.login = login;
     }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
 
     public String getPassword() {
         return password;
@@ -155,11 +194,11 @@ public class User extends AbstractAuditingEntity implements Serializable {
     }
 
     public DateTime getResetDate() {
-       return resetDate;
+        return resetDate;
     }
 
     public void setResetDate(DateTime resetDate) {
-       this.resetDate = resetDate;
+        this.resetDate = resetDate;
     }
 
     public String getLangKey() {
@@ -185,6 +224,55 @@ public class User extends AbstractAuditingEntity implements Serializable {
     public void setPersistentTokens(Set<PersistentToken> persistentTokens) {
         this.persistentTokens = persistentTokens;
     }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public String getCreditCard() {
+        return creditCard;
+    }
+
+    public void setCreditCard(String creditCard) {
+        this.creditCard = creditCard;
+    }
+
+    public String getCcMonth() {
+        return ccMonth;
+    }
+
+    public void setCcMonth(String ccMonth) {
+        this.ccMonth = ccMonth;
+    }
+
+    public String getCcYear() {
+        return ccYear;
+    }
+
+    public void setCcYear(String ccYear) {
+        this.ccYear = ccYear;
+    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -212,13 +300,13 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @Override
     public String toString() {
         return "User{" +
-                "login='" + login + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", activated='" + activated + '\'' +
-                ", langKey='" + langKey + '\'' +
-                ", activationKey='" + activationKey + '\'' +
-                "}";
+            "login='" + login + '\'' +
+            ", firstName='" + firstName + '\'' +
+            ", lastName='" + lastName + '\'' +
+            ", email='" + email + '\'' +
+            ", activated='" + activated + '\'' +
+            ", langKey='" + langKey + '\'' +
+            ", activationKey='" + activationKey + '\'' +
+            "}";
     }
 }

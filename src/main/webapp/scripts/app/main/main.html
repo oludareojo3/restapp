@@ -4,12 +4,12 @@
             <span class="hipster img-responsive img-rounded"></span>
         </div>
         <div class="col-md-8">
-            <h1>Welcome, Java Hipster!</h1>
-            <p class="lead">This is your homepage</p>
+            <h1>Welcome to the online restaurant, {{account.login}}!</h1>
+            <p class="lead">Please proceed to browse our menu</p>
 
             <div ng-switch="isAuthenticated()">
                 <div class="alert alert-success" ng-switch-when="true">
-                    You are logged in as user "{{account.login}}".
+                    You are logged in and can now order food for delivery!
                 </div>
 
                 <div class="alert alert-warning" ng-switch-when="false">
@@ -21,8 +21,8 @@
                 </div>
             </div>
 
-            <p>
-                If you have any question on JHipster:
+           	<p>
+                This site was made with JHipster:
             </p>
 
             <ul>
@@ -36,6 +36,7 @@
             <p>
              <span>If you like JHipster, don't forget to give us a star on </span>&nbsp;<a href="https://github.com/jhipster/generator-jhipster" target="_blank">Github</a>!
             </p>
+             
         </div>
     </div>
 </div>

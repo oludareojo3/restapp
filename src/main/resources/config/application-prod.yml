@@ -9,7 +9,7 @@ spring:
         active: prod
     datasource:
         dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
-        url: jdbc:mysql://aa4560p32lkv7k.c70sz4ieaodq.us-east-1.rds.amazonaws.com:3306/hiptest?useUnicode=true&characterEncoding=utf8
+        url: jdbc:mysql://aazvdwn62gb2dg.c70sz4ieaodq.us-east-1.rds.amazonaws.com:3306/hiptest?useUnicode=true&characterEncoding=utf8
         databaseName: hiptest
         serverName:
         username: restappuser

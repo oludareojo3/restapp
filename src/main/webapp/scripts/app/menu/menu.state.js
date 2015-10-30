@@ -5,7 +5,7 @@ angular.module('restappApp')
         $stateProvider
             .state('menu', {
                 parent: 'site',
-                url: '/',
+                url: '/menu',
                 data: {},
                 views: {
                     'content@': {

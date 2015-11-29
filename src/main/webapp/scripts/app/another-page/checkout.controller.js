@@ -1,5 +1,5 @@
 angular.module('restappApp')
-    .controller('PaymentsController', function($scope) {
+    .controller('CheckoutController', function($scope) {
 
         $scope.name = 'Anton';
 
